@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+int main()
+{
+    string s;
+    cin>>s;
+    int j,n=0,e=0,i=0,t=0;
+    for(j=0;j<s.size();j++)
+    {
+        if(s[j]=='n')
+        {
+            n++;
+        }
+        else if(s[j]=='e')e++;
+        else if(s[j]=='i') i++;
+        else if(s[j]=='t') t++;
+    }
+
+ if(n<3) cout<<0;
+
+else{
+        n=n-1;
+   n=n/2;
+    e=e/3;
+    int ans=min(n,(min(i,min(e,t))));
+    cout<<ans<<endl;
+}
+}
