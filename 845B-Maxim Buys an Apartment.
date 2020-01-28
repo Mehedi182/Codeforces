@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+int main()
+{
+        ll a,b;
+        cin>>a>>b;
+        if(a==b || b==0) cout<<0<<" "<<0;
+        else
+        {
+            if((a-b)<=b*2) cout<<1<<" "<<a-b;
+            else cout<<1<<" "<<b*2;
+        }
+}
