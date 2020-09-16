@@ -1,0 +1,101 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int a,b,c,mid,d=0,i,e=0;
+    cin>>a>>b>>c;
+    if((a>b&&a<c)||(a<b&&a>c))
+    {
+        mid=a;
+    }
+    else if((b>a && b<c)||(b<a && b>c))
+    {
+        mid=b;
+    }
+    else if((c>a &&c<b)||(c<a &&c>b))
+    {
+        mid=c;
+    }
+    if(mid==b)
+    {
+        if(a>b)
+        {
+            for(i=a;i>b;i--)
+            {
+                d++;
+            }
+            for(i=c;i<b;i++)
+            {
+                e++;
+            }
+            cout<<d+e;
+        }
+        else
+        {
+            for(i=c;i>b;i--)
+            {
+                d++;
+            }
+            for(i=a;i<b;i++)
+            {
+                e++;
+            }
+            cout<<d+e;
+        }
+    }
+    else if(mid==a)
+    {
+        if(b>a)
+        {
+            for(i=b;i>a;i--)
+            {
+                d++;
+            }
+            for(i=c;i<a;i++)
+            {
+                e++;
+            }
+            cout<<d+e;
+        }
+        else
+        {
+            for(i=c;i>a;i--)
+            {
+                d++;
+            }
+            for(i=b;i<a;i++)
+            {
+                e++;
+            }
+            cout<<d+e;
+        }
+    }
+    else if(mid==c)
+    {
+        if(a>c)
+        {
+            for(i=a;i>c;i--)
+            {
+                d++;
+            }
+            for(i=b;i<c;i++)
+            {
+                e++;
+            }
+            cout<<d+e;
+        }
+        else
+        {
+            for(i=b;i>c;i--)
+            {
+                d++;
+            }
+            for(i=a;i<c;i++)
+            {
+                e++;
+            }
+            cout<<d+e;
+        }
+    }
+
+}
